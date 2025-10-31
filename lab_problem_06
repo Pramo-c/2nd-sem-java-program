@@ -1,0 +1,49 @@
+class Main{
+	
+	static void printmatrix(int[][] arr)
+	{
+		for(int i=0;i<2;i++)
+		{
+			for(int j=0;j<2;j++)
+			{
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	static void matrix_multi(int[][] arr ,int[][] arr2,int[][] result)
+	{
+	
+		for(int i=0;i<2;i++)
+		{
+			for(int j=0;j<2;j++)
+			{
+				for(int k=0;k<2;k++)
+				{
+					result[i][j]+=arr[i][k]*arr2[k][j];
+				}
+			}
+			
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		int[][] matrix_a={{1,2},{1,2}};
+		int[][] matrix_b={{1,2},{1,2}};
+		int[][] result=new int[2][2];
+		
+		System.out.println("first matrinx is :");
+		printmatrix(matrix_a);
+		
+		System.out.println("second matrinx is :");
+		printmatrix(matrix_b);
+		
+		System.out.println("matrix multiplaction:");
+		matrix_multi(matrix_a,matrix_b,result);
+		printmatrix(result);
+			
+	
+	}
+}
