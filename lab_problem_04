@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class Main{
+
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		int num;
+		System.out.println("how many number you enter:");
+		num=input.nextInt();
+			System.out.println("enter your number:");
+			int larg=0;
+			for(int i=0;i<num;i++)
+			{
+				int n=input.nextInt();
+				if(n>larg)
+				{
+					larg=n;
+				}
+			}
+			System.out.println("largest numbet is :"+larg);
+	
+	}
+}
